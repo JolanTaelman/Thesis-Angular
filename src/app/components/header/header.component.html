@@ -1,0 +1,57 @@
+<header class="navbar" role="banner">
+  <div class="container">
+    <div class="navbar__group navbar__group_left">
+      <ul class="navbar__main-navigation">
+        <li> <a routerLink="/home" routerLinkActive="active">
+            <i class="fas fa-home" aria-hidden="true"></i><span>Home</span></a></li>
+        <li>
+          <a routerLink="/profile" routerLinkActive="active"><i class="fas fa-user"
+              aria-hidden="true"></i><span>Profile</span></a></li>
+
+        <li>
+          <a routerLink="/login">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            <span>Login</span>
+          </a>
+        </li>
+
+      </ul>
+    </div><span class="navbar__logo"><a href="/"><img src="assets\images\bird.svg"></a></span>
+
+
+    <div class="navbar__group navbar__group_right">
+      <div class="navbar__new-tweet">
+        <a class="navbar__new-tweet-button btn" data-toggle="modal" data-target="#new-tweet">
+          <span>Tweet</span>
+        </a>
+      </div>
+
+
+      <!-- Modal -->
+      <div class="new-tweet modal fade" id="new-tweet">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header"><button class="close" type="button" data-dismiss="modal"
+                aria-hidden="true">×</button>
+              <h4 class="modal-title">Compose new Tweet</h4>
+            </div>
+            <div class="modal-body">
+                <textarea #textbox type="text" (change)="this.textAreaValue = textbox.value" name="body" placeholder="Enter your tweet here" maxlength="280"></textarea>
+              <button class="btn new-tweet__button" (click)="addTweet(this.textAreaValue)">Tweet</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!--
+<div class="navbar__profile"><a class="navbar__profile-logout" href="/logout" title="logout"><img
+            class="tweet__image chat-image logout-image"
+            src="https://avatars1.githubusercontent.com/u/10989616?v=4"><span>Logout</span></a>
+      </div>
+        
+      -->
+    </div>
+
+  </div>
+</header>

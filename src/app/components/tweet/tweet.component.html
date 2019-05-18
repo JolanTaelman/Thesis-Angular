@@ -1,0 +1,45 @@
+<div class="tweet">
+  <div class="row">
+    <div class="col-1">
+      <img class='tweet__image' src="https://avatars1.githubusercontent.com/u/10989616?v=4" />
+      <img>
+    </div>
+    <div class="col-11 tweet_description">
+      <span class="tweet__username-date">
+        <span class="tweet__username">
+          <a>{{tweet._user}} </a>
+        </span>
+        <span class="tweet__date">
+          {{tweet._date | date}}
+        </span>
+      </span>
+      <p class="tweet__content">
+        {{tweet._content}}
+      </p>
+      <div class="tweet__form">
+        <a class="btn tweet__edit">
+          edit
+        </a>
+        <button class="btn tweet__delete" (click)="onDelete(this.tweet.getID())"> Delete</button>
+      </div>
+
+    </div>
+    <div *ngFor="let item of this.tweet.comments" class="col-12 tweet__comments">
+
+      <hr>
+      <img class='tweets__comment-image' src="item.commenterPicture">
+      <span class="tweet__username-date">
+        <span class="tweet__username">{{item.user()}}</span>
+        <span class="tweet__date"> {{item.date()}}</span>
+      </span>
+          <p class="tweet__content">{{item.body()}}</p>
+
+    </div>
+
+    <hr>
+    <div class="col-12 tweet__coment-form">
+      <textarea #textBox name="body" (change)='this.commentText = textBox.value' placeholder="Enter the comment"></textarea>
+      <button class="btn" (click)="postComment(this.commentText)">Comment</button>
+    </div>
+  </div>
+</div>

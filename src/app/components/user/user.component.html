@@ -1,0 +1,69 @@
+<div class="user-information">
+  <div class="row">
+    <div class="col-4 user-information__image">
+      <img class='tweet__image' src="https://avatars1.githubusercontent.com/u/10989616?v=4" />
+    </div>
+    <div class="col-8 user-information__text">
+      <a href="/users/ + req.user.id">
+        <h4>Jolan Taelman</h4>
+      </a>
+      <div class="user-information__stats user-information__stats_small">
+        <ul>
+          <li>
+            <span class="user-information__stats-title">Tweets:</span>
+            <span>
+              <a href="/users/ + req.user.id">
+                15
+              </a>
+            </span>
+          </li>
+          <li>
+            <span class="user-information__stats-title">Following:</span>
+            <span>
+              <a href="/users/ + req.user.id">
+                5
+              </a>
+            </span>
+          </li>
+          <li>
+            <span class="user-information__stats-title">Followers:</span>
+            <span>
+              <a href="/users/ + req.user.id">
+                15
+              </a>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 user-information__stats user-information__stats_large">
+    <ul>
+      <li>
+        <span class="user-information__stat-title">
+          Tweets:
+        </span>
+        <span>
+          <a href="/users/ + req.user.id/following"> 12</a>
+        </span>
+
+      </li>
+      <li>
+        <span class="user-information__stat-title">
+          Following:
+        </span>
+        <span>
+          <a href="/users/ + req.user.id/following"> 11</a>
+        </span>
+      </li>
+      <li>
+        <span class="user-information__stat-title">
+          Followers:
+        </span>
+        <span>
+          <a href="/users/ + req.user.id/followers"> 12</a>
+        </span>
+      </li>
+    </ul>
+  </div>  
+</div>
