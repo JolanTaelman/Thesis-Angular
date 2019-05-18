@@ -9,7 +9,7 @@ import { Observable } from "rxjs";
   styleUrls: ["./tweet-list.component.scss"]
 })
 export class TweetListComponent implements OnInit {
-  private tweets: Tweet[];
+  public tweets: Tweet[];
 
   constructor(private tweetService: TweetsService) {
     this.tweets = [];

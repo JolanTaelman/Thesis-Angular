@@ -8,7 +8,7 @@ import { Tweet } from "src/app/models/tweet.model";
   styleUrls: ["./header.component.scss"]
 })
 export class HeaderComponent implements OnInit {
-  private textAreaValue: String;
+  public textAreaValue: String;
 
   constructor(private tweetService: TweetsService) {}
 

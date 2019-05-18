@@ -4,7 +4,7 @@ export class Tweet {
   private _content: String;
   private _responses: String[];
   private _date: Date;
-  private comments: Comment[];
+  public comments: Comment[];
   private picture: String;
 
   constructor(id, user, content, date, responses?) {
@@ -13,7 +13,7 @@ export class Tweet {
     this._content = content;
     this._responses = responses;
     this._date = date;
-    this.comments = []
+    this.comments = [];
   }
   addComment(comment: String) {
     var CL;
@@ -28,6 +28,18 @@ export class Tweet {
 
   getID() {
     return this._id;
+  }
+  getUser() {
+    return this._user;
+  }
+  getDate() {
+    return this._date;
+  }
+  getContent() {
+    return this._content;
+  }
+  getComments() {
+    return this.comments;
   }
 }
 

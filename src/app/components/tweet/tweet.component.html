@@ -7,14 +7,14 @@
     <div class="col-11 tweet_description">
       <span class="tweet__username-date">
         <span class="tweet__username">
-          <a>{{tweet._user}} </a>
+          <a>{{tweet.getUser()}} </a>
         </span>
         <span class="tweet__date">
-          {{tweet._date | date}}
+          {{tweet.getDate() | date}}
         </span>
       </span>
       <p class="tweet__content">
-        {{tweet._content}}
+        {{tweet.getContent()}}
       </p>
       <div class="tweet__form">
         <a class="btn tweet__edit">
