@@ -8,12 +8,6 @@
           <a routerLink="/profile" routerLinkActive="active"><i class="fas fa-user"
               aria-hidden="true"></i><span>Profile</span></a></li>
 
-        <li>
-          <a routerLink="/login">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            <span>Login</span>
-          </a>
-        </li>
 
       </ul>
     </div><span class="navbar__logo"><a href="/"><img src="assets\images\bird.svg"></a></span>
@@ -36,7 +30,8 @@
               <h4 class="modal-title">Compose new Tweet</h4>
             </div>
             <div class="modal-body">
-                <textarea #textbox type="text" (change)="this.textAreaValue = textbox.value" name="body" placeholder="Enter your tweet here" maxlength="280"></textarea>
+              <textarea #textbox type="text" (change)="this.textAreaValue = textbox.value" name="body"
+                placeholder="Enter your tweet here" maxlength="280"></textarea>
               <button class="btn new-tweet__button" (click)="addTweet(this.textAreaValue)">Tweet</button>
             </div>
           </div>

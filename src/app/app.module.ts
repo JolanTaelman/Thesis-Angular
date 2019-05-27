@@ -11,7 +11,6 @@ import {HomeComponent} from './components/home/home.component';
 import {UserComponent} from './components/user/user.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +22,6 @@ import { LoginComponent } from './components/login/login.component';
     UserComponent,
     HeaderComponent,
     ProfileComponent,
-    LoginComponent
 
   ],
   imports: [
