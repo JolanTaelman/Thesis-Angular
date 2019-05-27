@@ -16,7 +16,7 @@
                   Tweets:
                 </span>
                 <span>
-                  <a>15</a>
+                  <a>12</a>
                 </span>
               </li>
               <li>
@@ -24,7 +24,7 @@
                   Following:
                 </span>
                 <span>
-                  <a>15</a>
+                  <a>11</a>
                 </span>
               </li>
               <li>
@@ -32,16 +32,24 @@
                   Followers:
                 </span>
                 <span>
-                  <a>15</a>
+                  <a>12</a>
                 </span>
               </li>
             </ul>
           </div>
         </div>
       </div>
+      <div class="profile">
+        <div *ngFor="let item of images">
+          <img class="test__image" src={{item.pictureUrl}}>
+        </div>
+        <button (click)="addPicture()">add new</button>
+
+      </div>
+
     </div>
     <div class="col-lg-8">
-        <app-tweet-list></app-tweet-list>
+      <app-tweet-list></app-tweet-list>
     </div>
   </div>
 </div>

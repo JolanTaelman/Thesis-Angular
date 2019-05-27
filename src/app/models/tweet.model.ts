@@ -22,7 +22,7 @@ export class Tweet {
     } else {
       CL = this.comments.length + 1;
     }
-    var newComment = new Comment(CL, "current User", comment);
+    var newComment = new Comment(CL, "username", comment);
     this.comments.push(newComment);
   }
 
