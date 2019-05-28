@@ -9,14 +9,15 @@ export class TweetsService {
 
   constructor() {
     this.tweets = this.initTweets();
+    this.tweets[0].addComment("comment 1");
   }
 
   initTweets() {
     var date = new Date("2019-05-08T20:59:34.076Z");
     return [
-      new Tweet(1, "Fred", "Tweet 1", date),
-      new Tweet(2, "mark", "Tweet 2", date),
-      new Tweet(3, "ted", "Tweet 3", date)
+      new Tweet(1, "Jolan Taelman", "Tweet 1", date),
+      new Tweet(2, "Jolan Taelman", "Tweet 2", date),
+      new Tweet(3, "Jolan Taelman", "Tweet 3", date)
     ];
   }
 
