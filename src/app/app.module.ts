@@ -11,6 +11,7 @@ import {HomeComponent} from './components/home/home.component';
 import {UserComponent} from './components/user/user.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,9 @@ import { ProfileComponent } from './components/profile/profile.component';
     HttpClientModule,
 
   ],
-  providers: [],
+  //providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+
   bootstrap: [AppComponent]
 })
 export class AppModule {}
